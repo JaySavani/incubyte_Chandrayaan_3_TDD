@@ -20,4 +20,10 @@ describe('Spacecraft Navigation', () => {
         expect(chandrayaan.position_direction).toEqual({ x: 0, y: 1, z: 0, direction: 'E' });
     });
 
+    it('should navigate the spacecraft accurately turnleft', () => {
+        const chandrayaan = new Spacecraft(0, 1, -1, 'U');
+        chandrayaan.executeCommands(["l"]);
+        expect(chandrayaan.position_direction).toEqual({ x: 0, y: 1, z: -1, direction: 'W' });
+    });
+
 });

@@ -17,10 +17,10 @@ class Spacecraft {
             case "W":
                 this.position_direction.x -= 1;
                 break;
-            case "Up":
+            case "U":
                 this.position_direction.z += 1;
                 break;
-            case "Down":
+            case "D":
                 this.position_direction.z -= 1;
                 break;
             default:
@@ -42,10 +42,10 @@ class Spacecraft {
             case "W":
                 this.position_direction.x += 1;
                 break;
-            case "Up":
+            case "U":
                 this.position_direction.z -= 1;
                 break;
-            case "Down":
+            case "D":
                 this.position_direction.z += 1;
                 break;
             default:
@@ -67,16 +67,42 @@ class Spacecraft {
             case "W":
                 this.position_direction.direction = "N";
                 break;
-            case "Up":
+            case "U":
                 this.position_direction.direction = "E";
                 break;
-            case "Down":
+            case "D":
                 this.position_direction.direction = "E";
                 break;
             default:
                 break;
         }
     }
+
+    turnLeft() {
+        switch (this.position_direction.direction) {
+            case "N":
+                this.position_direction.direction = "W";
+                break;
+            case "S":
+                this.position_direction.direction = "W";
+                break;
+            case "E":
+                this.position_direction.direction = "N";
+                break;
+            case "W":
+                this.position_direction.direction = "S";
+                break;
+            case "U":
+                this.position_direction.direction = "W";
+                break;
+            case "D":
+                this.position_direction.direction = "W";
+                break;
+            default:
+                break;
+        }
+    }
+
 
     executeCommands(commands) {
         for (const command of commands) {
@@ -89,6 +115,9 @@ class Spacecraft {
                     break;
                 case "r":
                     this.turnRight();
+                    break;
+                case "l":
+                    this.turnLeft();
                     break;
                 default:
                     break;
