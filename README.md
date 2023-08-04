@@ -2,7 +2,15 @@
 
 This is a test-driven development (TDD) project for the Chandrayaan 3 lunar spacecraft navigation program. The program translates commands sent from Earth into instructions understood by the spacecraft to navigate through the galaxy using galactic coordinates.
 
-## Requirements
+### What is TDD?
+
+> Test-driven development (TDD) is an evolutionary approach to development
+which combines test-first development, where you write a test before you write
+just enough production code to fulfil that test, and refactoring. In other words,
+it’s one way to think through your requirements
+or design before you write your functional code.
+
+## Requirements For Our Problem
 
 The following functionalities are implemented in the program:
 
@@ -21,3 +29,4 @@ The following functionalities are implemented in the program:
 In this project, I have used Istanbul (nyc) to measure code coverage, which is the percentage of code that is executed during the test run. While code coverage is a valuable metric to assess the extent of test coverage, it does not guarantee that the code is completely bug-free or well-tested.
 
 It's important to keep in mind that code coverage is just one aspect of testing, and achieving 100% code coverage does not necessarily mean that all possible scenarios and edge cases have been tested. It's essential to combine code coverage with other testing practices to ensure the overall quality of your code
+
