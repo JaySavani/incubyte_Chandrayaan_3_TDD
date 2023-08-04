@@ -10,11 +10,14 @@ The following functionalities are implemented in the program:
 2. Turn the spacecraft left/right (l, r): The spacecraft rotates 90 degrees to the left or right, changing its facing direction.
 3. Turn the spacecraft up/down (u, d): The spacecraft changes its angle, rotating upwards or downwards.
 
-## Installation
+## Tools and Technologies Used
 
-1. Make sure you have Node.js installed on your machine.
-2. Clone this repository to your local machine.
+- **Node.js**: Node.js is a JavaScript runtime that allows us to run JavaScript code outside of the browser. It is used in this project to execute the spacecraft navigation program and run the test cases.
+- **Jest**: Jest is a popular JavaScript testing framework. It is used for writing and running the test cases to ensure that the spacecraft navigation functions work as expected.
+- **Istanbul (nyc)**: Istanbul, also known as `nyc`, is a code coverage tool. It works in conjunction with Jest to generate code coverage reports, helping us measure how much of the codebase is covered by the tests.
 
-```bash
-git clone https://github.com/your-username/chandrayaan-3-tdd-assessment.git
-cd chandrayaan-3-tdd-assessment
+## Code Coverage and Testing Practices
+
+In this project, I have used Istanbul (nyc) to measure code coverage, which is the percentage of code that is executed during the test run. While code coverage is a valuable metric to assess the extent of test coverage, it does not guarantee that the code is completely bug-free or well-tested.
+
+It's important to keep in mind that code coverage is just one aspect of testing, and achieving 100% code coverage does not necessarily mean that all possible scenarios and edge cases have been tested. It's essential to combine code coverage with other testing practices to ensure the overall quality of your code
