@@ -53,6 +53,31 @@ class Spacecraft {
         }
     }
 
+    turnRight() {
+        switch (this.position_direction.direction) {
+            case "N":
+                this.position_direction.direction = "E";
+                break;
+            case "S":
+                this.position_direction.direction = "W";
+                break;
+            case "E":
+                this.position_direction.direction = "S";
+                break;
+            case "W":
+                this.position_direction.direction = "N";
+                break;
+            case "Up":
+                this.position_direction.direction = "E";
+                break;
+            case "Down":
+                this.position_direction.direction = "E";
+                break;
+            default:
+                break;
+        }
+    }
+
     executeCommands(commands) {
         for (const command of commands) {
             switch (command) {
@@ -61,6 +86,9 @@ class Spacecraft {
                     break;
                 case "b":
                     this.moveBackward();
+                    break;
+                case "r":
+                    this.turnRight();
                     break;
                 default:
                     break;
