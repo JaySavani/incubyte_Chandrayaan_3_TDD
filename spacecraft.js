@@ -1,4 +1,5 @@
 class Spacecraft {
+
     constructor(x = 0, y = 0, z = 0, direction = 'N') {
         this.position_direction = { x: x, y: y, z: z, direction: direction };
     }
@@ -56,6 +57,8 @@ class Spacecraft {
     turnRight() {
         switch (this.position_direction.direction) {
             case "N":
+            case "U":
+            case "D":
                 this.position_direction.direction = "E";
                 break;
             case "S":
@@ -66,12 +69,6 @@ class Spacecraft {
                 break;
             case "W":
                 this.position_direction.direction = "N";
-                break;
-            case "U":
-                this.position_direction.direction = "E";
-                break;
-            case "D":
-                this.position_direction.direction = "E";
                 break;
             default:
                 break;
@@ -81,6 +78,8 @@ class Spacecraft {
     turnLeft() {
         switch (this.position_direction.direction) {
             case "N":
+            case "U":
+            case "D":
                 this.position_direction.direction = "W";
                 break;
             case "S":
@@ -91,12 +90,6 @@ class Spacecraft {
                 break;
             case "W":
                 this.position_direction.direction = "S";
-                break;
-            case "U":
-                this.position_direction.direction = "W";
-                break;
-            case "D":
-                this.position_direction.direction = "W";
                 break;
             default:
                 break;
@@ -121,8 +114,7 @@ class Spacecraft {
             case "N":
             case "S":
             case "E":
-            case "W":
-                this.position_direction.direction = "D";
+            case "W": this.position_direction.direction = "D";
                 break;
             default:
                 break;
