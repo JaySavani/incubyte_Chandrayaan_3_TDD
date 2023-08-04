@@ -6,4 +6,11 @@ describe('Spacecraft Navigation', () => {
         chandrayaan.executeCommands(["f"]);
         expect(chandrayaan.position_direction).toEqual({ x: 0, y: 1, z: 0, direction: 'N' });
     });
+
+    it('should navigate the spacecraft accurately backward', () => {
+        const chandrayaan = new Spacecraft();
+        chandrayaan.executeCommands(["b"]);
+        expect(chandrayaan.position_direction).toEqual({ x: 0, y: -1, z: 0, direction: 'N' });
+    });
+
 });
